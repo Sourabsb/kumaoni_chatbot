@@ -1,0 +1,151 @@
+# =====================
+# KUMAONI CHATBOT
+# .gitignore
+# =====================
+
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# =====================
+# Node.js
+# =====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# =====================
+# Environment Files
+# =====================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+*.env
+
+# =====================
+# Database Files
+# =====================
+*.db
+*.sqlite
+*.sqlite3
+backend/database/chatbot.db
+
+# =====================
+# Embeddings & Model Files
+# =====================
+embeddings/*.pkl
+*.pkl
+*.pt
+*.bin
+*.onnx
+*.h5
+models/
+
+# =====================
+# Build Outputs
+# =====================
+dist/
+build/
+.next/
+out/
+*.bundle.js
+
+# =====================
+# Log Files
+# =====================
+*.log
+logs/
+server.log
+npm-debug.log
+yarn-error.log
+
+# =====================
+# IDE & Editor
+# =====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# =====================
+# OS Generated
+# =====================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =====================
+# Temp Files
+# =====================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# =====================
+# Audio/Media (TTS generated)
+# =====================
+*.mp3
+*.wav
+*.ogg
+voice/temp_audio/
+
+# =====================
+# Dataset Files
+# =====================
+*.jsonl
+kumaoni_dataset*.jsonl
+backend/data/
+
+# =====================
+# Misc
+# =====================
+.cache/
+*.pid
+*.seed
+.sass-cache/
+coverage/
+.nyc_output/

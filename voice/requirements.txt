@@ -1,0 +1,23 @@
+# Voice Client Dependencies
+# All free and open-source
+
+# Speech-to-Text
+faster-whisper>=1.0.0
+
+# Voice Activity Detection
+# silero-vad is loaded via torch.hub, no separate install needed
+
+# Audio capture and playback
+sounddevice>=0.4.6
+numpy>=1.24.0
+pygame>=2.5.0
+
+# Text-to-Speech
+edge-tts>=6.1.0
+
+# HTTP client
+requests>=2.31.0
+
+# Core
+torch>=2.0.0
+torchaudio>=2.0.0
