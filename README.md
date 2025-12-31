@@ -296,6 +296,12 @@ Secure sign up/sign in with persistent sessions.
 
 ---
 
+📦 **Dataset Availability**
+
+I have created and uploaded the English–Kumaoni translation dataset to Hugging Face, which is publicly available at:
+https://huggingface.co/datasets/sourabsb/english-kumaoni_translation_dataset
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
