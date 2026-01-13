@@ -10,13 +10,23 @@ class Chatbot:
     def chat(self, user_message: str) -> dict:
         """Process user message and return Kumaoni response."""
         
-        # Step 1: Normalize to English
-        english_meaning = normalizer.normalize(user_message)
+        # Build conversation history for context awareness
+        history_text = ""
+        if self.context_manager.history:
+            history_text = "\n".join(
+                f"{m.role.capitalize()}: {m.content}" 
+                for m in self.context_manager.history[-6:]  # Last 3 turns
+            )
         
-        # Step 2: Retrieve similar examples
-        examples = retriever.retrieve(english_meaning)
+        # Step 1: Generate context-aware English conversational response (Stage 1)
+        english_meaning = normalizer.normalize(user_message, context=history_text)
         
-        # Step 3: Get conversation context
+        # Step 2: Retrieve Kumaoni examples using combined semantic query
+        # Combines original input + conversational intent for better pattern matching
+        combined_query = f"{user_message} | {english_meaning}"
+        examples = retriever.retrieve(combined_query)
+        
+        # Step 3: Get conversation summary for generation
         context = self.context_manager.get_summary() if len(self.context_manager.history) > 2 else ""
         
         # Step 4: Generate Kumaoni reply

@@ -19,7 +19,7 @@ EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 EMBEDDING_DIM = 384
 
 # Retrieval
-TOP_K_RESULTS = 20
+TOP_K_RESULTS = 30
 
 # Conversation
 MAX_HISTORY_TURNS = 10
